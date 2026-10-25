@@ -1,0 +1,502 @@
+```html
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سوشيال برو | منصة تزويد خدمات مواقع التواصل الاجتماعي</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts: Cairo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Cairo', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#f0f5ff',
+              100: '#e5edff',
+              500: '#4f46e5',
+              600: '#4338ca',
+              700: '#3730a3',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+    }
+    .gradient-hero {
+      background: radial-gradient(circle at 50% 20%, rgba(99, 102, 241, 0.15) 0%, rgba(15, 23, 42, 0) 70%);
+    }
+    .glass-card {
+      background: rgba(30, 41, 59, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col antialiased selection:bg-indigo-500 selection:text-white">
+
+  <!-- شريط الإشعارات العلوي -->
+  <div class="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white text-xs md:text-sm py-2 px-4 text-center font-medium shadow-md">
+    <span>🔥 تخفيض حصري اليوم: احصل على رصيد إضافي 20% عند الشحن باستخدام كود: <strong>PRO2026</strong></span>
+  </div>
+
+  <!-- ترويسة الموقع (Header) -->
+  <header class="sticky top-0 z-40 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- الشعار -->
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-500 to-purple-500 flex items-center justify-center text-white shadow-lg shadow-indigo-500/30">
+          <i class="fa-solid fa-bolt text-lg"></i>
+        </div>
+        <span class="text-2xl font-black tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-200 to-indigo-300">
+          سوشيال<span class="text-indigo-500">برو</span>
+        </span>
+      </div>
+
+      <!-- روابط سريعة للمكتب -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-300">
+        <a href="#services" class="hover:text-indigo-400 transition-colors">الخدمات السريعة</a>
+        <a href="#calculator" class="hover:text-indigo-400 transition-colors">حاسبة الأسعار</a>
+        <a href="#features" class="hover:text-indigo-400 transition-colors">لماذا نحن؟</a>
+        <a href="#reviews" class="hover:text-indigo-400 transition-colors">آراء العملاء</a>
+      </nav>
+
+      <!-- إجراء سريع -->
+      <div class="flex items-center gap-3">
+        <a href="#calculator" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-bold text-sm shadow-md shadow-indigo-600/30 transition-all hover:scale-105 active:scale-95">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span>طلب فوري</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- القسم البصري الترحيبي (Hero Section) -->
+  <section class="relative py-16 lg:py-24 overflow-hidden gradient-hero">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs md:text-sm font-semibold mb-6">
+        <i class="fa-solid fa-sparkles"></i>
+        <span>أسرع خوادم دعم ونمو حسابات التواصل في العالم العربي</span>
+      </div>
+
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight max-w-4xl mx-auto mb-6">
+        عزز انتشارك على السوشيال ميديا 
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 block mt-2">
+          بأعلى جودة وسرعة تسليم فورية!
+        </span>
+      </h1>
+
+      <p class="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+        سواء كنت صانع محتوى، مسوّقاً، أو صاحب مشروع؛ نوفر لك متابعين، مشاهدات، ولايكات حقيقية بدون الحاجة لكلمة السر وبضمان تعويض كامل.
+      </p>
+
+      <!-- ميزات سريعة تحت العنوان -->
+      <div class="flex flex-wrap justify-center items-center gap-4 sm:gap-8 text-xs sm:text-sm text-slate-300 font-medium">
+        <span class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-400"></i> بدون كلمة سر</span>
+        <span class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-400"></i> تنفيذ آلي فوري</span>
+        <span class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-400"></i> ضمان تعويض النقص</span>
+        <span class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-400"></i> دعم فني 24/7</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- حاسبة الطلب المباشر الفوري (Interactive Order Section) -->
+  <section id="calculator" class="py-12 bg-slate-900/60 border-y border-slate-800 relative">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="glass-card rounded-3xl p-6 sm:p-10 shadow-2xl relative overflow-hidden">
+        
+        <div class="text-center mb-8">
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white mb-2">أنشئ طلبك المباشر بثوانٍ ⚡</h2>
+          <p class="text-slate-400 text-sm">حدد المنصة والكمية، وأدخل الرابط، وسيقوم النظام بالبدء تلقائياً</p>
+        </div>
+
+        <form id="orderForm" class="space-y-6" onsubmit="event.preventDefault(); submitOrder();">
+          <!-- اختيار المنصة -->
+          <div>
+            <label class="block text-sm font-bold text-slate-300 mb-2">1. اختر المنصة:</label>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+              <button type="button" onclick="selectPlatform('instagram')" class="platform-btn p-3 rounded-2xl border border-slate-700 bg-slate-800/80 hover:bg-slate-700/80 flex flex-col items-center gap-2 transition-all active:scale-95" data-platform="instagram">
+                <i class="fa-brands fa-instagram text-2xl text-pink-500"></i>
+                <span class="text-xs font-semibold">انستقرام</span>
+              </button>
+
+              <button type="button" onclick="selectPlatform('tiktok')" class="platform-btn p-3 rounded-2xl border border-slate-700 bg-slate-800/80 hover:bg-slate-700/80 flex flex-col items-center gap-2 transition-all active:scale-95" data-platform="tiktok">
+                <i class="fa-brands fa-tiktok text-2xl text-cyan-400"></i>
+                <span class="text-xs font-semibold">تيك توك</span>
+              </button>
+
+              <button type="button" onclick="selectPlatform('youtube')" class="platform-btn p-3 rounded-2xl border border-slate-700 bg-slate-800/80 hover:bg-slate-700/80 flex flex-col items-center gap-2 transition-all active:scale-95" data-platform="youtube">
+                <i class="fa-brands fa-youtube text-2xl text-red-500"></i>
+                <span class="text-xs font-semibold">يوتيوب</span>
+              </button>
+
+              <button type="button" onclick="selectPlatform('x')" class="platform-btn p-3 rounded-2xl border border-slate-700 bg-slate-800/80 hover:bg-slate-700/80 flex flex-col items-center gap-2 transition-all active:scale-95" data-platform="x">
+                <i class="fa-brands fa-x-twitter text-2xl text-white"></i>
+                <span class="text-xs font-semibold">إكس (تويتر)</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- اختيار نوع الخدمة -->
+          <div>
+            <label class="block text-sm font-bold text-slate-300 mb-2">2. نوع الخدمة المطلوبة:</label>
+            <select id="serviceType" onchange="calculatePrice()" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-slate-100 focus:outline-none focus:border-indigo-500 text-sm">
+              <!-- ستُملأ بالـ JavaScript بناءً على المنصة -->
+            </select>
+          </div>
+
+          <!-- شريط تحديد الكمية -->
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <label class="text-sm font-bold text-slate-300">3. حدد الكمية:</label>
+              <span id="quantityDisplay" class="text-indigo-400 font-extrabold text-base bg-indigo-950/60 px-3 py-1 rounded-lg border border-indigo-800">1,000</span>
+            </div>
+            <input type="range" id="quantityRange" min="500" max="20000" step="500" value="1000" oninput="updateQuantity(this.value)" class="w-full accent-indigo-500 cursor-pointer h-2 bg-slate-700 rounded-lg">
+            <div class="flex justify-between text-xs text-slate-500 mt-1">
+              <span>الحد الأدنى: 500</span>
+              <span>الحد الأقصى: 20,000</span>
+            </div>
+          </div>
+
+          <!-- رابط الحساب أو المنشور -->
+          <div>
+            <label class="block text-sm font-bold text-slate-300 mb-2">4. رابط الحساب / المنشور:</label>
+            <div class="relative">
+              <input type="url" id="targetLink" required placeholder="https://instagram.com/your_username" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-slate-100 placeholder-slate-500 focus:outline-none focus:border-indigo-500 text-sm">
+              <i class="fa-solid fa-link absolute left-4 top-3.5 text-slate-500"></i>
+            </div>
+            <p class="text-[11px] text-slate-500 mt-1.5"><i class="fa-solid fa-lock text-emerald-400 ml-1"></i> لا نطلب كلمة المرور إطلاقاً. تأكد فقط أن الحساب عام (Public).</p>
+          </div>
+
+          <!-- خلاصة التكلفة وزر الطلب -->
+          <div class="p-4 rounded-2xl bg-slate-800/90 border border-slate-700/80 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+              <span class="text-xs text-slate-400 block">الإجمالي المستحق:</span>
+              <div class="flex items-baseline gap-1">
+                <span id="totalPrice" class="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200">5.00</span>
+                <span class="text-sm font-bold text-emerald-400">$ دولار</span>
+              </div>
+            </div>
+
+            <button type="submit" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-gradient-to-r from-indigo-500 via-indigo-600 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-extrabold shadow-lg shadow-indigo-600/30 transition-all hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-2">
+              <i class="fa-solid fa-rocket"></i>
+              <span>تأكيد الطلب وبدء الدعم</span>
+            </button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- باقات جاهزة سريعة (Pre-made Packages) -->
+  <section id="services" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <h2 class="text-3xl font-black text-white mb-3">الباقات الأكثر طلباً 🔥</h2>
+      <p class="text-slate-400 text-sm">اختر باقة متكاملة مصممة خصيصاً لإعطاء دفعة قوية لحسابك الجديد أو نشاطك التجاري</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <!-- باقة البداية -->
+      <div class="glass-card rounded-3xl p-6 flex flex-col justify-between hover:border-slate-600 transition-all">
+        <div>
+          <div class="w-12 h-12 rounded-2xl bg-sky-500/10 text-sky-400 flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-seedling"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">باقة الانطلاقة</h3>
+          <p class="text-slate-400 text-xs mb-6">مثالية للحسابات الجديدة لبناء الثقة الأولية لدى الزوار.</p>
+          <div class="text-3xl font-black text-white mb-6">
+            $9.99 <span class="text-xs text-slate-500 font-normal">/ دفعة واحدة</span>
+          </div>
+          <ul class="space-y-3 text-xs text-slate-300 mb-8 border-t border-slate-800 pt-6">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> 1,500 متابع انستقرام أو تيك توك</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> 5,000 مشاهدة للفيديوهات</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> 500 إعجاب منشورات</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> سرعة تسليم تدريجية طبيعية</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> ضمان 30 يوماً</li>
+          </ul>
+        </div>
+        <button onclick="quickOrder('باقة الانطلاقة', 9.99)" class="w-full py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-sm border border-slate-700 transition-colors">
+          شراء الباقة
+        </button>
+      </div>
+
+      <!-- باقة المشاهير (الأكثر شعبية) -->
+      <div class="glass-card rounded-3xl p-6 flex flex-col justify-between border-2 border-indigo-500 relative transform md:-translate-y-2 shadow-2xl shadow-indigo-500/10">
+        <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-indigo-500 to-purple-500 text-white text-[11px] font-black px-4 py-1 rounded-full uppercase tracking-wider">
+          الأكثر طلباً ومبيعات
+        </div>
+        <div>
+          <div class="w-12 h-12 rounded-2xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-crown"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">باقة المحترفين</h3>
+          <p class="text-slate-400 text-xs mb-6">لصناع المحتوى والمتاجر التي تحتاج ظهوراً قوياً وموثوقاً.</p>
+          <div class="text-3xl font-black text-white mb-6">
+            $24.99 <span class="text-xs text-slate-500 font-normal">/ دفعة واحدة</span>
+          </div>
+          <ul class="space-y-3 text-xs text-slate-300 mb-8 border-t border-slate-800 pt-6">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> 5,000 متابع عالي الجودة</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> 25,000 مشاهدة ريلز وتيك توك</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> 2,000 تفاعل وإعجاب</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> توزيع على أكثر من منشور</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> ضمان تعويض تلقائي 60 يوماً</li>
+          </ul>
+        </div>
+        <button onclick="quickOrder('باقة المحترفين', 24.99)" class="w-full py-3 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-bold text-sm shadow-lg shadow-indigo-600/30 transition-all">
+          شراء الباقة الآن
+        </button>
+      </div>
+
+      <!-- باقة المؤسسات -->
+      <div class="glass-card rounded-3xl p-6 flex flex-col justify-between hover:border-slate-600 transition-all">
+        <div>
+          <div class="w-12 h-12 rounded-2xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-gem"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">باقة كبار الشخصيات VIP</h3>
+          <p class="text-slate-400 text-xs mb-6">مناسبة للشركات والمؤثرين للحصول على دفعة فيروسية واسعة.</p>
+          <div class="text-3xl font-black text-white mb-6">
+            $59.99 <span class="text-xs text-slate-500 font-normal">/ دفعة واحدة</span>
+          </div>
+          <ul class="space-y-3 text-xs text-slate-300 mb-8 border-t border-slate-800 pt-6">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> 15,000 متابع حسابات نشطة</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> 100,000 مشاهدة سريعة</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> تعليقات عربية مخصصة</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> مدير حساب مخصص على واتساب</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> ضمان مدى الحياة</li>
+          </ul>
+        </div>
+        <button onclick="quickOrder('باقة VIP', 59.99)" class="w-full py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-sm border border-slate-700 transition-colors">
+          شراء الباقة
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ميزات المنصة (Features) -->
+  <section id="features" class="py-16 bg-slate-900/40 border-t border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
+        
+        <div class="p-6 rounded-2xl bg-slate-800/40 border border-slate-700/40">
+          <div class="w-12 h-12 mx-auto rounded-full bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h4 class="font-bold text-white mb-2">أمان 100%</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">أساليبنا متوافقة مع شروط المنصات دون أي خطر على حسابك.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-800/40 border border-slate-700/40">
+          <div class="w-12 h-12 mx-auto rounded-full bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-gauge-high"></i>
+          </div>
+          <h4 class="font-bold text-white mb-2">سرعة فائقة</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">تبدأ خوادمنا بالضخ الفوري خلال دقائق قليلة من إتمام الدفع.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-800/40 border border-slate-700/40">
+          <div class="w-12 h-12 mx-auto rounded-full bg-purple-500/10 text-purple-400 flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-rotate-right"></i>
+          </div>
+          <h4 class="font-bold text-white mb-2">ضمان التعويض</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">أي نقص يطرأ يتم تعويضه مجاناً عبر نظام الرصد التلقائي.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-800/40 border border-slate-700/40">
+          <div class="w-12 h-12 mx-auto rounded-full bg-pink-500/10 text-pink-400 flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-headset"></i>
+          </div>
+          <h4 class="font-bold text-white mb-2">دعم فني متواصل</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">فريق دعم متواجد على مدار الساعة للرد على استفساراتكم.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- نافذة التنبيه / إتمام الطلب (Modal) -->
+  <div id="orderModal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+    <div class="glass-card bg-slate-900 border border-slate-700 rounded-3xl max-w-md w-full p-6 text-center shadow-2xl relative">
+      <button onclick="closeModal()" class="absolute top-4 left-4 text-slate-400 hover:text-white text-lg">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto text-3xl mb-4">
+        <i class="fa-solid fa-check"></i>
+      </div>
+
+      <h3 class="text-xl font-bold text-white mb-2">تم تجهيز الطلب بنجاح!</h3>
+      <p id="modalDetails" class="text-sm text-slate-300 mb-6 leading-relaxed">
+        تفاصيل طلبك جاهزة، يمكنك الآن المتابعة للدفع عبر البطاقة أو المحفظة الإلكترونية.
+      </p>
+
+      <div class="space-y-3">
+        <button onclick="simulatePayment()" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-bold text-sm shadow-lg shadow-emerald-500/20 transition-all">
+          <i class="fa-solid fa-credit-card ml-2"></i> الدفع الآمن الآن
+        </button>
+        <button onclick="closeModal()" class="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-400 text-xs transition-colors">
+          إلغاء أو تعديل الطلب
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- التذييل (Footer) -->
+  <footer class="mt-auto border-t border-slate-800 bg-slate-950 py-8 text-center text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>© 2026 سوشيال برو لخدمات التسويق الرقمي. جميع الحقوق محفوظة.</p>
+      <div class="flex items-center gap-4 text-sm">
+        <a href="#" class="hover:text-slate-300"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="#" class="hover:text-slate-300"><i class="fa-brands fa-telegram"></i></a>
+        <a href="#" class="hover:text-slate-300"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- سكربت التحكم والتفاعل (JS Logic) -->
+  <script>
+    // قائمة الخدمات وأسعار كل 1000 وحدة بالدولار
+    const platformServices = {
+      instagram: [
+        { id: 'ig_followers', name: 'متابعون حقيقيون متفاعلون (ضمان 30 يوم)', pricePer1k: 5.0 },
+        { id: 'ig_likes', name: 'إعجابات سريعة جداً للمنشورات', pricePer1k: 1.8 },
+        { id: 'ig_views', name: 'مشاهدات ريلز / ستوري فورية', pricePer1k: 0.8 },
+        { id: 'ig_comments', name: 'تعليقات عربية إيجابية مخصصة', pricePer1k: 12.0 }
+      ],
+      tiktok: [
+        { id: 'tt_followers', name: 'متابعون نشطون على تيك توك', pricePer1k: 6.5 },
+        { id: 'tt_views', name: 'مشاهدات فيديو صاروخية تدعم الإكسبلور', pricePer1k: 0.5 },
+        { id: 'tt_likes', name: 'لايكات وإعجابات تيك توك', pricePer1k: 2.2 },
+        { id: 'tt_shares', name: 'حركات إكسبلور ومشاركات Share', pricePer1k: 1.5 }
+      ],
+      youtube: [
+        { id: 'yt_subscribers', name: 'مشتركون يوتيوب لتحقيق شروط الربح', pricePer1k: 18.0 },
+        { id: 'yt_views', name: 'مشاهدات يوتيوب بجودة عالية واحتفاظ عالي', pricePer1k: 4.5 },
+        { id: 'yt_likes', name: 'إعجابات يوتيوب آمنة 100%', pricePer1k: 3.5 }
+      ],
+      x: [
+        { id: 'x_followers', name: 'متابعو إكس (تويتر) عرب وخليجيين', pricePer1k: 14.0 },
+        { id: 'x_retweets', name: 'إعادة تغريد (ريتويت) فوري', pricePer1k: 4.0 },
+        { id: 'x_likes', name: 'إعجابات التغريدات', pricePer1k: 3.0 }
+      ]
+    };
+
+    let currentPlatform = 'instagram';
+
+    // اختيار المنصة وتحديث الخدمات
+    function selectPlatform(platform) {
+      currentPlatform = platform;
+      
+      // تحديث مظهر الأزرار
+      document.querySelectorAll('.platform-btn').forEach(btn => {
+        if(btn.dataset.platform === platform) {
+          btn.classList.add('border-indigo-500', 'bg-indigo-950/40', 'ring-2', 'ring-indigo-500/50');
+        } else {
+          btn.classList.remove('border-indigo-500', 'bg-indigo-950/40', 'ring-2', 'ring-indigo-500/50');
+        }
+      });
+
+      // ملء خيارات الخدمة
+      const serviceSelect = document.getElementById('serviceType');
+      serviceSelect.innerHTML = '';
+      
+      platformServices[platform].forEach(service => {
+        const option = document.createElement('option');
+        option.value = service.id;
+        option.textContent = `${service.name} — ($${service.pricePer1k.toFixed(2)} لكل 1,000)`;
+        option.dataset.rate = service.pricePer1k;
+        serviceSelect.appendChild(option);
+      });
+
+      calculatePrice();
+    }
+
+    // تحديث عرض الكمية عند تحريك الشريط
+    function updateQuantity(val) {
+      document.getElementById('quantityDisplay').innerText = Number(val).toLocaleString('en-US');
+      calculatePrice();
+    }
+
+    // حساب السعر النهائي
+    function calculatePrice() {
+      const quantity = parseInt(document.getElementById('quantityRange').value);
+      const serviceSelect = document.getElementById('serviceType');
+      const selectedOption = serviceSelect.options[serviceSelect.selectedIndex];
+      
+      if (!selectedOption) return;
+
+      const ratePer1k = parseFloat(selectedOption.dataset.rate);
+      const total = (quantity / 1000) * ratePer1k;
+      
+      document.getElementById('totalPrice').innerText = total.toFixed(2);
+    }
+
+    // إرسال طلب مخصص
+    function submitOrder() {
+      const link = document.getElementById('targetLink').value;
+      const quantity = document.getElementById('quantityDisplay').innerText;
+      const serviceSelect = document.getElementById('serviceType');
+      const serviceName = serviceSelect.options[serviceSelect.selectedIndex].text.split('—')[0];
+      const price = document.getElementById('totalPrice').innerText;
+
+      const modalDetails = document.getElementById('modalDetails');
+      modalDetails.innerHTML = `
+        لقد اخترت: <strong>${serviceName}</strong><br>
+        الكمية: <strong>${quantity}</strong> | الإجمالي: <strong>$${price}</strong><br>
+        الرابط المستهدف: <span class="text-xs text-indigo-300 break-all">${link}</span>
+      `;
+      document.getElementById('orderModal').classList.remove('hidden');
+    }
+
+    // طلب باقة جاهزة
+    function quickOrder(pkgName, price) {
+      const modalDetails = document.getElementById('modalDetails');
+      modalDetails.innerHTML = `
+        لقد قمت باختيار: <strong>${pkgName}</strong><br>
+        الإجمالي المطلوب سداده: <strong>$${price.toFixed(2)}</strong><br>
+        سيتم التواصل معك لإرسال الروابط المستهدفة فور إتمام الدفع.
+      `;
+      document.getElementById('orderModal').classList.remove('hidden');
+    }
+
+    // غلق النافذة المنبثقة
+    function closeModal() {
+      document.getElementById('orderModal').classList.add('hidden');
+    }
+
+    // محاكاة إتمام العملية
+    function simulatePayment() {
+      const modal = document.getElementById('orderModal');
+      const details = document.getElementById('modalDetails');
+      details.innerHTML = `<span class="text-emerald-400 font-bold">🎉 تم قبول الدفع بنجاح! رقم الطلب #SP-${Math.floor(100000 + Math.random() * 900000)}، جاري إرسال الطلب لخوادم التزويد الآن.</span>`;
+      setTimeout(() => {
+        closeModal();
+      }, 2500);
+    }
+
+    // التهيئة الأولية عند تحميل الصفحة
+    window.addEventListener('DOMContentLoaded', () => {
+      selectPlatform('instagram');
+    });
+  </script>
+</body>
+</html>
+```
